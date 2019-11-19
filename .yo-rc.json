@@ -1,0 +1,59 @@
+{
+    "generator-jhipster": {
+        "promptValues": {
+            "packageName": "com.yux.cocoji",
+            "nativeLanguage": "fr"
+        },
+        "jhipsterVersion": "5.8.2",
+        "applicationType": "monolith",
+        "baseName": "cocoji",
+        "packageName": "com.yux.cocoji",
+        "packageFolder": "com/yux/cocoji",
+        "serverPort": "8080",
+        "authenticationType": "jwt",
+        "cacheProvider": "ehcache",
+        "enableHibernateCache": false,
+        "websocket": false,
+        "databaseType": "sql",
+        "devDatabaseType": "mysql",
+        "prodDatabaseType": "mysql",
+        "searchEngine": "elasticsearch",
+        "messageBroker": false,
+        "serviceDiscoveryType": false,
+        "buildTool": "maven",
+        "enableSwaggerCodegen": false,
+        "jwtSecretKey": "ZDNmOTdmODMxNzMyMzdkZjQxYzRjYTBhYjgzNDVhYmJlNjEzMWUyOGE0MWI5OTYwYWI5YzA5NWNjOGEwODc5YzMxYjgwZWI1Zjk0ZjVmZWIzYjA4MzFhN2VmODhhMGExZmRmMjcyZmM0MDM1Njk2MjUwY2QwNmRhMmMzNWEwNGI=",
+        "clientFramework": "angularX",
+        "useSass": false,
+        "clientPackageManager": "npm",
+        "testFrameworks": ["protractor"],
+        "jhiPrefix": "jhi",
+        "entitySuffix": "",
+        "dtoSuffix": "DTO",
+        "otherModules": [
+            {
+                "name": "generator-jhipster-standalone-profile",
+                "version": "2.3.0"
+            },
+            {
+                "name": "generator-jhipster-primeng-charts",
+                "version": "1.2.0"
+            },
+            {
+                "name": "generator-jhipster-angular-material-integration",
+                "version": "1.0.17"
+            },
+            {
+                "name": "generator-jhipster-administration-database",
+                "version": "1.0.4"
+            },
+            {
+                "name": "generator-jhipster-social-login-api",
+                "version": "0.0.1"
+            }
+        ],
+        "enableTranslation": true,
+        "nativeLanguage": "fr",
+        "languages": ["fr", "en"]
+    }
+}
