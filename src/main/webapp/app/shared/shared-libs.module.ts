@@ -11,10 +11,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   imports: [NgbModule, InfiniteScrollModule, CookieModule.forRoot(), FontAwesomeModule, ReactiveFormsModule],
   exports: [FormsModule, CommonModule, NgbModule, NgJhipsterModule, InfiniteScrollModule, FontAwesomeModule, ReactiveFormsModule]
 })
-export class XarmatSharedLibsModule {
+export class CocojiSharedLibsModule {
   static forRoot() {
     return {
-      ngModule: XarmatSharedLibsModule
+      ngModule: CocojiSharedLibsModule
     };
   }
 }

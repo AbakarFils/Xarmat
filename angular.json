@@ -3,14 +3,14 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "xarmat": {
+    "cocoji": {
       "root": "",
       "sourceRoot": "src/main/webapp",
       "projectType": "application",
       "architect": {}
     }
   },
-  "defaultProject": "xarmat",
+  "defaultProject": "cocoji",
   "cli": {
     "packageManager": "npm"
   },
