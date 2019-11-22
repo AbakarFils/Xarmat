@@ -1,6 +1,6 @@
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { ProdConfig } from './blocks/config/prod.config';
-import { CocojiAppModule } from './app.module';
+import { XarmatAppModule } from './app.module';
 
 ProdConfig();
 
@@ -9,6 +9,6 @@ if (module['hot']) {
 }
 
 platformBrowserDynamic()
-  .bootstrapModule(CocojiAppModule, { preserveWhitespaces: true })
+  .bootstrapModule(XarmatAppModule, { preserveWhitespaces: true })
   .then(success => console.log(`Application started`))
   .catch(err => console.error(err));

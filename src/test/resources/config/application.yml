@@ -15,10 +15,10 @@
 
 spring:
   application:
-    name: cocoji
+    name: Xarmat
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:h2:mem:cocoji;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    url: jdbc:h2:mem:Xarmat;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
     name:
     username:
     password:
@@ -42,11 +42,6 @@ spring:
       hibernate.generate_statistics: false
       hibernate.hbm2ddl.auto: validate
       hibernate.jdbc.time_zone: UTC
-  data:
-    elasticsearch:
-      properties:
-        path:
-          home: target/elasticsearch
   liquibase:
     contexts: test
   mail:
@@ -60,13 +55,13 @@ spring:
       enabled: false
   task:
     execution:
-      thread-name-prefix: cocoji-task-
+      thread-name-prefix: xarmat-task-
       pool:
         core-size: 1
         max-size: 50
         queue-capacity: 10000
     scheduling:
-      thread-name-prefix: cocoji-scheduling-
+      thread-name-prefix: xarmat-scheduling-
       pool:
         size: 1
   thymeleaf:
@@ -84,7 +79,7 @@ server:
 
 jhipster:
   clientApp:
-    name: 'cocojiApp'
+    name: 'xarmatApp'
   logging:
     # To test json console appender
     use-json-format: true # By default, logs are in Json format
@@ -101,7 +96,7 @@ jhipster:
     authentication:
       jwt:
         # This token must be encoded using Base64 (you can type `echo 'secret-key'|base64` on your command line)
-        base64-secret: ZDNmOTdmODMxNzMyMzdkZjQxYzRjYTBhYjgzNDVhYmJlNjEzMWUyOGE0MWI5OTYwYWI5YzA5NWNjOGEwODc5YzMxYjgwZWI1Zjk0ZjVmZWIzYjA4MzFhN2VmODhhMGExZmRmMjcyZmM0MDM1Njk2MjUwY2QwNmRhMmMzNWEwNGI=
+        base64-secret: YWY2Yzk4NTFmNDE4NmEzOTUzMWM3ZDZkN2NmN2EwOTJmM2E1OTkwYTU5MGI3YmE3MTk4ODVjYTU4OThmODgyOTFiNDkxOTE3YTcyMDhlYzQ0NjliZTliMDMzZTA0OTJhNjhhMTcxNTM0MDk1ZDg4YTllNGE5YzU2YjE3ZmFmMWE=
         # Token is valid 24 hours
         token-validity-in-seconds: 86400
   metrics:

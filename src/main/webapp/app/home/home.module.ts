@@ -1,12 +1,12 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { CocojiSharedModule } from 'app/shared';
+import { XarmatSharedModule } from 'app/shared';
 import { HOME_ROUTE, HomeComponent } from './';
 
 @NgModule({
-  imports: [CocojiSharedModule, RouterModule.forChild([HOME_ROUTE])],
+  imports: [XarmatSharedModule, RouterModule.forChild([HOME_ROUTE])],
   declarations: [HomeComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class CocojiHomeModule {}
+export class XarmatHomeModule {}

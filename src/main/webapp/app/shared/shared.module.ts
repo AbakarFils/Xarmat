@@ -1,17 +1,17 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { CocojiSharedLibsModule, CocojiSharedCommonModule, JhiLoginModalComponent, HasAnyAuthorityDirective } from './';
+import { XarmatSharedLibsModule, XarmatSharedCommonModule, JhiLoginModalComponent, HasAnyAuthorityDirective } from './';
 
 @NgModule({
-  imports: [CocojiSharedLibsModule, CocojiSharedCommonModule],
+  imports: [XarmatSharedLibsModule, XarmatSharedCommonModule],
   declarations: [JhiLoginModalComponent, HasAnyAuthorityDirective],
   entryComponents: [JhiLoginModalComponent],
-  exports: [CocojiSharedCommonModule, JhiLoginModalComponent, HasAnyAuthorityDirective],
+  exports: [XarmatSharedCommonModule, JhiLoginModalComponent, HasAnyAuthorityDirective],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class CocojiSharedModule {
+export class XarmatSharedModule {
   static forRoot() {
     return {
-      ngModule: CocojiSharedModule
+      ngModule: XarmatSharedModule
     };
   }
 }

@@ -4,7 +4,7 @@ import { Observable, of, throwError } from 'rxjs';
 
 import { JhiLanguageService } from 'ng-jhipster';
 import { MockLanguageService } from '../../../helpers/mock-language.service';
-import { CocojiTestModule } from '../../../test.module';
+import { XarmatTestModule } from '../../../test.module';
 import { EMAIL_ALREADY_USED_TYPE, LOGIN_ALREADY_USED_TYPE } from 'app/shared';
 import { Register } from 'app/account/register/register.service';
 import { RegisterComponent } from 'app/account/register/register.component';
@@ -16,7 +16,7 @@ describe('Component Tests', () => {
 
     beforeEach(async(() => {
       TestBed.configureTestingModule({
-        imports: [CocojiTestModule],
+        imports: [XarmatTestModule],
         declarations: [RegisterComponent],
         providers: [FormBuilder]
       })
@@ -57,7 +57,7 @@ describe('Component Tests', () => {
           email: '',
           password: 'password',
           login: '',
-          langKey: 'fr'
+          langKey: 'en'
         });
         expect(comp.success).toEqual(true);
         expect(mockTranslate.getCurrentSpy).toHaveBeenCalled();

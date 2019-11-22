@@ -17,12 +17,7 @@ logging:
   level:
     ROOT: DEBUG
     io.github.jhipster: DEBUG
-    com.yux.cocoji: DEBUG
-
-management:
-  health:
-    elasticsearch:
-      enabled: false
+    com.isi.m2gl.xarmat: DEBUG
 
 spring:
   profiles:
@@ -41,20 +36,15 @@ spring:
       indent-output: true
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:mysql://localhost:3306/cocoji?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC
-    username: root
+    url: jdbc:postgresql://localhost:5432/Xarmat
+    username: Xarmat
     password:
     hikari:
       poolName: Hikari
       auto-commit: false
-      data-source-properties:
-        cachePrepStmts: true
-        prepStmtCacheSize: 250
-        prepStmtCacheSqlLimit: 2048
-        useServerPrepStmts: true
   jpa:
-    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
-    database: MYSQL
+    database-platform: io.github.jhipster.domain.util.FixedPostgreSQL95Dialect
+    database: POSTGRESQL
     show-sql: true
     properties:
       hibernate.id.new_generator_mappings: true
@@ -62,11 +52,6 @@ spring:
       hibernate.cache.use_second_level_cache: false
       hibernate.cache.use_query_cache: false
       hibernate.generate_statistics: false
-  data:
-    elasticsearch:
-      properties:
-        path:
-          home: target/elasticsearch
   liquibase:
     # Remove 'faker' if you do not want the sample data to be loaded automatically
     contexts: dev, faker
@@ -90,10 +75,6 @@ server:
 # ===================================================================
 
 jhipster:
-  cache: # Cache configuration
-    ehcache: # Ehcache configuration
-      time-to-live-seconds: 3600 # By default objects stay 1 hour in the cache
-      max-entries: 100 # Number of objects in each cache entry
   # CORS is only enabled by default with the "dev" profile, so BrowserSync can access the API
   cors:
     allowed-origins: '*'
@@ -106,12 +87,12 @@ jhipster:
     authentication:
       jwt:
         # This token must be encoded using Base64 and be at least 256 bits long (you can type `openssl rand -base64 64` on your command line to generate a 512 bits one)
-        base64-secret: ZDNmOTdmODMxNzMyMzdkZjQxYzRjYTBhYjgzNDVhYmJlNjEzMWUyOGE0MWI5OTYwYWI5YzA5NWNjOGEwODc5YzMxYjgwZWI1Zjk0ZjVmZWIzYjA4MzFhN2VmODhhMGExZmRmMjcyZmM0MDM1Njk2MjUwY2QwNmRhMmMzNWEwNGI=
+        base64-secret: YWY2Yzk4NTFmNDE4NmEzOTUzMWM3ZDZkN2NmN2EwOTJmM2E1OTkwYTU5MGI3YmE3MTk4ODVjYTU4OThmODgyOTFiNDkxOTE3YTcyMDhlYzQ0NjliZTliMDMzZTA0OTJhNjhhMTcxNTM0MDk1ZDg4YTllNGE5YzU2YjE3ZmFmMWE=
         # Token is valid 24 hours
         token-validity-in-seconds: 86400
         token-validity-in-seconds-for-remember-me: 2592000
   mail: # specific JHipster mail property, for standard properties see MailProperties
-    from: cocoji@localhost
+    from: Xarmat@localhost
     base-url: http://127.0.0.1:8080
   metrics:
     logs: # Reports metrics in the logs

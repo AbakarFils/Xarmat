@@ -1,7 +1,7 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { CocojiSharedModule } from 'app/shared';
+import { XarmatSharedModule } from 'app/shared';
 
 import {
   PasswordStrengthBarComponent,
@@ -15,7 +15,7 @@ import {
 } from './';
 
 @NgModule({
-  imports: [CocojiSharedModule, RouterModule.forChild(accountState)],
+  imports: [XarmatSharedModule, RouterModule.forChild(accountState)],
   declarations: [
     ActivateComponent,
     RegisterComponent,
@@ -27,4 +27,4 @@ import {
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class CocojiAccountModule {}
+export class XarmatAccountModule {}

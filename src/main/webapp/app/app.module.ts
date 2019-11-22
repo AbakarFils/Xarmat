@@ -11,12 +11,12 @@ import { AuthInterceptor } from './blocks/interceptor/auth.interceptor';
 import { AuthExpiredInterceptor } from './blocks/interceptor/auth-expired.interceptor';
 import { ErrorHandlerInterceptor } from './blocks/interceptor/errorhandler.interceptor';
 import { NotificationInterceptor } from './blocks/interceptor/notification.interceptor';
-import { CocojiSharedModule } from 'app/shared';
-import { CocojiCoreModule } from 'app/core';
-import { CocojiAppRoutingModule } from './app-routing.module';
-import { CocojiHomeModule } from './home/home.module';
-import { CocojiAccountModule } from './account/account.module';
-import { CocojiEntityModule } from './entities/entity.module';
+import { XarmatSharedModule } from 'app/shared';
+import { XarmatCoreModule } from 'app/core';
+import { XarmatAppRoutingModule } from './app-routing.module';
+import { XarmatHomeModule } from './home/home.module';
+import { XarmatAccountModule } from './account/account.module';
+import { XarmatEntityModule } from './entities/entity.module';
 import * as moment from 'moment';
 // jhipster-needle-angular-add-module-import JHipster will add new module here
 import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent, ActiveMenuDirective, ErrorComponent } from './layouts';
@@ -30,15 +30,15 @@ import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent
       alertAsToast: false,
       alertTimeout: 5000,
       i18nEnabled: true,
-      defaultI18nLang: 'fr'
+      defaultI18nLang: 'en'
     }),
-    CocojiSharedModule.forRoot(),
-    CocojiCoreModule,
-    CocojiHomeModule,
-    CocojiAccountModule,
+    XarmatSharedModule.forRoot(),
+    XarmatCoreModule,
+    XarmatHomeModule,
+    XarmatAccountModule,
     // jhipster-needle-angular-add-module JHipster will add new module here
-    CocojiEntityModule,
-    CocojiAppRoutingModule
+    XarmatEntityModule,
+    XarmatAppRoutingModule
   ],
   declarations: [JhiMainComponent, NavbarComponent, ErrorComponent, PageRibbonComponent, ActiveMenuDirective, FooterComponent],
   providers: [
@@ -65,7 +65,7 @@ import { JhiMainComponent, NavbarComponent, FooterComponent, PageRibbonComponent
   ],
   bootstrap: [JhiMainComponent]
 })
-export class CocojiAppModule {
+export class XarmatAppModule {
   constructor(private dpConfig: NgbDatepickerConfig) {
     this.dpConfig.minDate = { year: moment().year() - 100, month: 1, day: 1 };
   }
