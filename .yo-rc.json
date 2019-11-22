@@ -1,0 +1,39 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.isi.m2gl.xarmat",
+      "nativeLanguage": "en"
+    },
+    "jhipsterVersion": "6.0.1",
+    "applicationType": "monolith",
+    "baseName": "Xarmat",
+    "packageName": "com.isi.m2gl.xarmat",
+    "packageFolder": "com/isi/m2gl/xarmat",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "YWY2Yzk4NTFmNDE4NmEzOTUzMWM3ZDZkN2NmN2EwOTJmM2E1OTkwYTU5MGI3YmE3MTk4ODVjYTU4OThmODgyOTFiNDkxOTE3YTcyMDhlYzQ0NjliZTliMDMzZTA0OTJhNjhhMTcxNTM0MDk1ZDg4YTllNGE5YzU2YjE3ZmFmMWE=",
+    "clientFramework": "angularX",
+    "clientTheme": "none",
+    "clientThemeVariant": "",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "testFrameworks": ["gatling"],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "en",
+    "languages": ["en", "fr"]
+  }
+}
