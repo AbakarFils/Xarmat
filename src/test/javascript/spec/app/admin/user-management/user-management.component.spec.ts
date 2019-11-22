@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed, async, inject, fakeAsync, tick } from '@angu
 import { Observable, of } from 'rxjs';
 import { HttpHeaders, HttpResponse } from '@angular/common/http';
 
-import { XarmatTestModule } from '../../../test.module';
+import { CocojiTestModule } from '../../../test.module';
 import { UserMgmtComponent } from 'app/admin/user-management/user-management.component';
 import { UserService, User } from 'app/core';
 
@@ -14,7 +14,7 @@ describe('Component Tests', () => {
 
     beforeEach(async(() => {
       TestBed.configureTestingModule({
-        imports: [XarmatTestModule],
+        imports: [CocojiTestModule],
         declarations: [UserMgmtComponent]
       })
         .overrideTemplate(UserMgmtComponent, '')

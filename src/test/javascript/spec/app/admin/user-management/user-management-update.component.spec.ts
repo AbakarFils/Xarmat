@@ -4,7 +4,7 @@ import { FormBuilder } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, of } from 'rxjs';
 
-import { XarmatTestModule } from '../../../test.module';
+import { CocojiTestModule } from '../../../test.module';
 import { UserMgmtUpdateComponent } from 'app/admin/user-management/user-management-update.component';
 import { UserService, User, JhiLanguageHelper } from 'app/core';
 
@@ -20,7 +20,7 @@ describe('Component Tests', () => {
 
     beforeEach(async(() => {
       TestBed.configureTestingModule({
-        imports: [XarmatTestModule],
+        imports: [CocojiTestModule],
         declarations: [UserMgmtUpdateComponent],
         providers: [
           FormBuilder,

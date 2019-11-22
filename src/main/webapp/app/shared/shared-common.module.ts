@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 
-import { XarmatSharedLibsModule, FindLanguageFromKeyPipe, JhiAlertComponent, JhiAlertErrorComponent } from './';
+import { CocojiSharedLibsModule, FindLanguageFromKeyPipe, JhiAlertComponent, JhiAlertErrorComponent } from './';
 
 @NgModule({
-  imports: [XarmatSharedLibsModule],
+  imports: [CocojiSharedLibsModule],
   declarations: [FindLanguageFromKeyPipe, JhiAlertComponent, JhiAlertErrorComponent],
-  exports: [XarmatSharedLibsModule, FindLanguageFromKeyPipe, JhiAlertComponent, JhiAlertErrorComponent]
+  exports: [CocojiSharedLibsModule, FindLanguageFromKeyPipe, JhiAlertComponent, JhiAlertErrorComponent]
 })
-export class XarmatSharedCommonModule {}
+export class CocojiSharedCommonModule {}
