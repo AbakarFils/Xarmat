@@ -1,0 +1,36 @@
+// Module gestion des tarifs
+//     Mame Penda Cisse  -  Moussa Diop
+
+entity Prestataire {
+	tarifHoraireMax Integer required,
+    points Integer required
+}
+
+entity Service {
+	nom String required
+}
+
+entity Metier {
+	nom String required
+}
+
+entity Montant {
+	montant Integer required,
+    type TypeMontant required
+}
+
+enum TypeMontant {
+	FIXE,HORAIRE,JOURNALIER,MENSUEL
+}
+
+relationship OneToMany {
+	Montant{prestataire} to Prestataire
+}
+
+relationship OneToMany {
+	Montant{service} to Service
+}
+
+relationship OneToMany {
+	Service{metier} to Metier
+}
