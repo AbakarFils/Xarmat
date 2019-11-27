@@ -6,7 +6,7 @@
     <groupId>com.isi.m2gl.xarmat</groupId>
     <artifactId>xarmat</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
     <name>Xarmat</name>
 
     <repositories>
