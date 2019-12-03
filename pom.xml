@@ -6,7 +6,7 @@
     <groupId>com.isi.m2gl.xarmat</groupId>
     <artifactId>xarmat</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
     <name>Xarmat</name>
 
     <repositories>
@@ -854,6 +854,16 @@
             </dependencies>
             <build>
                 <plugins>
+                    <plugin>
+                        <groupId>org.apache.tomcat.maven</groupId>
+                        <artifactId>tomcat7-maven-plugin</artifactId>
+                        <version>2.2</version>
+                        <configuration>
+                            <url>http://localhost:8082/manager/text</url>
+                            <server>TomcatServer</server>
+                            <path>/xarmat</path>
+                        </configuration>
+                    </plugin>
                     <plugin>
                         <artifactId>maven-clean-plugin</artifactId>
                         <configuration>

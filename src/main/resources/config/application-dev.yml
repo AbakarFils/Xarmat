@@ -36,9 +36,9 @@ spring:
       indent-output: true
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:postgresql://localhost:5432/Xarmat
-    username: Xarmat
-    password:
+    url: jdbc:postgresql://localhost:5432/xarmat
+    username: postgres
+    password: MANEinformatique
     hikari:
       poolName: Hikari
       auto-commit: false
