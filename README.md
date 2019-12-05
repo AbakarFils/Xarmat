@@ -21,6 +21,10 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 -   ** M2 GL** - _ISI_ - SESSION 2019-2020
 
+## List of contributors
+
+-                 https://github.com/AbakarFils/Xarmat/graphs/contributors
+
 ## Banch Authors
 
 -   **PIERRE YEM MBACK** - _Initial work_ - [dialrock360](https://github.com/dialrock360)
