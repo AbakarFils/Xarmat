@@ -2,7 +2,7 @@
 
 Web Application of Professional service delivery
 
-<img src="https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwj5gLrpvZ7mAhWmMewKHYsJCQ0QjRx6BAgBEAQ&url=https%3A%2F%2Fwww.cgocean.com%2FSocial%2FChef-d-entreprise%2FLa-prestation-de-services&psig=AOvVaw0oNrLqdFTd1fgnX-xPQ-tZ&ust=1575634427404648" title="a samane-ui logo"/>
+<img src="https://www.cgocean.com/var/webdev/storage/images/cgocean/blog-cgo/social/chef-d-entreprise/la-prestation-de-services/prestation-de-service.jpg/743854-1-fre-FR/Prestation-de-service.jpg.jpg" title="XARMAT logo"/>
 
 ## Getting Started
 
@@ -23,7 +23,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 ## List of contributors
 
--                 https://github.com/AbakarFils/Xarmat/graphs/contributors
+-                   https://github.com/AbakarFils/Xarmat/graphs/contributors
 
 ## Banch Authors
 
