@@ -1,4 +1,35 @@
-# Xarmat
+# XARMAT
+
+Web Application of Professional service delivery
+
+<img src="https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwj5gLrpvZ7mAhWmMewKHYsJCQ0QjRx6BAgBEAQ&url=https%3A%2F%2Fwww.cgocean.com%2FSocial%2FChef-d-entreprise%2FLa-prestation-de-services&psig=AOvVaw0oNrLqdFTd1fgnX-xPQ-tZ&ust=1575634427404648" title="a samane-ui logo"/>
+
+## Getting Started
+
+clone git : # git clone 'https://github.com/AbakarFils/Xarmat.git'
+
+1. make sure you have npm , tomcat, maven and java installed
+2. Install : copy all content of XARMAT folder in your source project folder
+3. build an run with maven or angular serve
+4. Start using XARMAT
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## Master project Authors
+
+-   ** M2 GL** - _ISI_ - SESSION 2019-2020
+
+## Banch Authors
+
+-   **PIERRE YEM MBACK** - _Initial work_ - [dialrock360](https://github.com/dialrock360)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Integration informations
 
 This application was generated using JHipster 6.0.1, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v6.0.1](https://www.jhipster.tech/documentation-archive/v6.0.1).
 
@@ -32,15 +63,15 @@ The `npm run` command will list all of the scripts available to run for this pro
 
 Service workers are commented by default, to enable them please uncomment the following code.
 
-- The service worker registering script in index.html
+-   The service worker registering script in index.html
 
 ```html
 <script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./service-worker.js').then(function() {
-      console.log('Service Worker Registered');
-    });
-  }
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./service-worker.js').then(function() {
+            console.log('Service Worker Registered');
+        });
+    }
 </script>
 ```
 

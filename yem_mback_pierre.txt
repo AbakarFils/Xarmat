@@ -1,0 +1,22 @@
+node {
+    agent any
+    stages {
+
+        stage('source') {
+            steps {
+                git 'https://github.com/AbakarFils/Xarmat.git'
+            }
+        }
+        stage('build') {
+            steps {
+                sh 'mvn clean install'
+            }
+        }
+        stage('build war') {
+            steps {
+                sh 'mvn -Pdev, war package'
+            }
+        }
+
+    }
+}
