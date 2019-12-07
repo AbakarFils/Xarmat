@@ -93,6 +93,6 @@ module.exports = (options) => ({
             chunksSortMode: 'manual',
             inject: 'body'
         }),
-        new BaseHrefWebpackPlugin({ baseHref: '/xarmat/' })
+        new BaseHrefWebpackPlugin({ baseHref: '/' })
     ]
 });
