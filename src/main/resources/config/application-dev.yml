@@ -38,7 +38,7 @@ spring:
     type: com.zaxxer.hikari.HikariDataSource
     url: jdbc:postgresql://localhost:5432/xarmat
     username: postgres
-    password: MANEinformatique
+    password: passer
     hikari:
       poolName: Hikari
       auto-commit: false

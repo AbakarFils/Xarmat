@@ -539,7 +539,7 @@
                         <changeLogFile>${project.basedir}/src/main/resources/config/liquibase/master.xml</changeLogFile>
                         <diffChangeLogFile>${project.basedir}/src/main/resources/config/liquibase/changelog/${maven.build.timestamp}_changelog.xml</diffChangeLogFile>
                         <driver>org.postgresql.Driver</driver>
-                        <url>jdbc:postgresql://localhost:5432/Xarmat</url>
+                        <url>jdbc:postgresql://localhost:5432/xarmat</url>
                         <defaultSchemaName></defaultSchemaName>
                         <username>Xarmat</username>
                         <password></password>
@@ -746,9 +746,12 @@
                     <artifactId>tomcat7-maven-plugin</artifactId>
                     <version>2.2</version>
                     <configuration>
-                        <url>http://localhost:8082/manager/text</url>
+                        <update>true</update>
+                        <url>http://localhost:8081/manager/text</url>
                         <server>TomcatServer</server>
-                        <path>/xarmat</path>
+                        <username>mthiam</username>
+                        <password>lepro$bss</password>
+                        <path>/Xarmat</path>
                     </configuration>
                 </plugin>
             </plugins>
