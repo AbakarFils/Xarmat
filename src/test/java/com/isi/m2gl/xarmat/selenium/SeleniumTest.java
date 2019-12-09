@@ -1,12 +1,19 @@
 package com.isi.m2gl.xarmat.selenium;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import java.io.File;
+import java.io.IOException;
+
 public class SeleniumTest {
-  //  private final WebDriver driver= new FirefoxDriver();
+
+
+
+    //  private final WebDriver driver= new FirefoxDriver();
     private  WebDriver driver;
     private  String url;
     private  String password;
@@ -14,7 +21,7 @@ public class SeleniumTest {
     public SeleniumTest() throws  InterruptedException{
         this.driver=new FirefoxDriver();
         this.InitDefaulValues();
-        this.loginTest();
+        this.test1();
     }
     public static void main(String[] args)throws  InterruptedException {
         new SeleniumTest();
@@ -45,20 +52,16 @@ public class SeleniumTest {
     }
 
     /*String appURL = "http://google.com";
-
     @BeforeClass
     public void testSetUp() {
-
         driver = new FirefoxDriver();
     }
-
     @Test
     public void verifyGooglePageTittle() {
         driver.navigate().to(appURL);
         String getTitle = driver.getTitle();
         Assert.assertEquals(getTitle, "Google");
     }
-
     @AfterClass
     public void tearDown() {
         driver.quit();
@@ -72,45 +75,55 @@ public class SeleniumTest {
         this.url = url;
     }
 
-    public void loginTest() throws  InterruptedException {
-        this.driver.get(this.url);
-        //driver.manage().window().maximize();
-        WebElement setlogin =  this.driver.findElement(By.id("login"));
-        setlogin.sendKeys( this.login);
-        Thread.sleep(2000);
-        WebElement setpwd =  this.driver.findElement(By.id("password"));
-        setpwd.sendKeys(this.password);
-        Thread.sleep(2000);
-        WebElement setserv =  this.driver.findElement(By.xpath("//input[@type=\"radio\"][@name=\"service\"][@value=\"1\"]"));
-        setserv.click();
-        Thread.sleep(2000);
-        WebElement setsubmit =  this.driver.findElement(By.id("valider"));
-        setsubmit.click();
-        this.logoutTest();
-    }
+
     private void InitDefaulValues() {
         this.login="dial";
         this.password="root";
-        this.url="http://localhost/sages/";
+        this.url="http://localhost:8030/";
     }
-    public void logoutTest() throws  InterruptedException {
-        Thread.sleep(5000);
+
+
+
+    public void test1() throws InterruptedException{
         this.driver.get(this.url);
-        //driver.manage().window().maximize();
-        String path="//a[@href=\"";
-          path +=this.url;
-          path +="Stokage/Famille/1\"";
-        WebElement setdropdown =  this.driver.findElement(By.xpath(path));
-        setdropdown.click();
-       /* Thread.sleep(2000);
-        WebElement setpwd =  this.driver.findElement(By.id("password"));
-        setpwd.sendKeys("root");
+        //Thread.sleep(5000);
+
+
+        WebElement sbb = this.driver.findElement(By.id("account-menu"));
+        sbb.click();
+        Thread.sleep(300);
+        //Thread.sleep(5000);
+
+
+        WebElement sbl = this.driver.findElement(By.id("login"));
+        sbl.click();
+
         Thread.sleep(2000);
-        WebElement setserv =  this.driver.findElement(By.xpath("//input[@type=\"radio\"][@name=\"service\"][@value=\"1\"]"));
-        setserv.click();
+
+        WebElement searchname = this.driver.findElement(By.id("username"));
+        searchname.sendKeys("admin");
+        //Thread.sleep(5000);
+
         Thread.sleep(2000);
-        WebElement setsubmit =  this.driver.findElement(By.id("valider"));
-        setsubmit.click();*/
+        WebElement searchpwd = this.driver.findElement(By.id("password"));
+        searchpwd.sendKeys("admin");
+
+        Thread.sleep(2000);
+
+        TakesScreenshot ts = (TakesScreenshot) this.driver;
+        File source = ts.getScreenshotAs(OutputType.FILE);
+        try{
+            FileUtils.copyFile(source, new File("TestSE1/screenshot/screen.png"));
+
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+        WebElement searchIcon = this.driver.findElement(By.xpath("//button[@jhitranslate='login.form.button']"));
+        searchIcon.click();
+        Thread.sleep(5000);
+        //driver.quit();
+
+
+
     }
- 
 }
