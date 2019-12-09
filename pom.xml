@@ -306,6 +306,16 @@
         <defaultGoal>spring-boot:run</defaultGoal>
         <plugins>
             <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <url>http://localhost:8080/manager/text</url>
+                    <server>TomcatServer</server>
+                    <path>/Xarmat</path>
+                </configuration>
+            </plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
@@ -589,6 +599,24 @@
                             <artifactId>spring-beans</artifactId>
                             <version>${spring.version}</version>
                         </dependency>
+                         <dependency>
+                            <groupId>org.seleniumhq.selenium</groupId>
+                            <artifactId>selenium-java</artifactId>
+                            <version>3.141.59</version>
+                         </dependency>
+
+
+                        <dependency>
+                            <groupId>org.seleniumhq.selenium</groupId>
+                            <artifactId>selenium-chrome-driver</artifactId>
+                            <version>3.5.1</version>
+                        </dependency>
+
+                        <dependency>
+                            <groupId>org.seleniumhq.selenium</groupId>
+                            <artifactId>selenium-server</artifactId>
+                            <version>3.141.59</version>
+                        </dependency>
                     </dependencies>
                 </plugin>
                 <plugin>
@@ -695,8 +723,9 @@
                         <runOrder>alphabetical</runOrder>
                         <reportsDirectory>${junit.utReportFolder}</reportsDirectory>
                         <excludes>
-                            <exclude>**/*IT*</exclude>
-                            <exclude>**/*IntTest*</exclude>
+                            <!-- <exclude>**/*IT*</exclude>
+                            <exclude>**/*IntTest*</exclude> -->
+                            <exclude>com.isi.m2gl/xarmat/selenium/Selenium*</exclude>
                         </excludes>
                     </configuration>
                 </plugin>
@@ -712,8 +741,10 @@
                         <runOrder>alphabetical</runOrder>
                         <reportsDirectory>${junit.itReportFolder}</reportsDirectory>
                         <includes>
-                            <include>**/*IT*</include>
-                            <include>**/*IntTest*</include>
+                            <!-- <include>**/*IT*</include>
+                            <include>**/*IntTest*</include> -->
+                            <include> com.isi.m2gl/xarmat/selenium/Selenium*</include>
+                           
                         </includes>
                     </configuration>
                     <executions>
