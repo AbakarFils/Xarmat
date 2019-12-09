@@ -243,6 +243,24 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.141.59</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-server</artifactId>
+            <version>3.141.59</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-chrome-driver</artifactId>
+            <version>3.141.59</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -418,6 +436,16 @@
                 </executions>
             </plugin>
             <!-- jhipster-needle-maven-add-plugin -->
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <url>http://localhost:8083/manager/xarmat</url>
+                    <server>TomcatServer</server>
+                    <path>/xarmat</path>
+                </configuration>
+            </plugin>
         </plugins>
         <pluginManagement>
             <plugins>
@@ -697,6 +725,7 @@
                         <excludes>
                             <exclude>**/*IT*</exclude>
                             <exclude>**/*IntTest*</exclude>
+                            <exclude>com.isi.m2gl.xarmat.selenium/SeleniumTest*</exclude>
                         </excludes>
                     </configuration>
                 </plugin>
@@ -712,8 +741,8 @@
                         <runOrder>alphabetical</runOrder>
                         <reportsDirectory>${junit.itReportFolder}</reportsDirectory>
                         <includes>
-                            <include>**/*IT*</include>
-                            <include>**/*IntTest*</include>
+                            <!--<include>**/*IT*</include> <include>**/*IntTest*</include> -->
+                            <include>com.isi.m2gl.xarmat.selenium/SeleniumTest*</include>
                         </includes>
                     </configuration>
                     <executions>
@@ -967,6 +996,7 @@
                             </webResources>
                         </configuration>
                     </plugin>
+
                 </plugins>
             </build>
         </profile>
