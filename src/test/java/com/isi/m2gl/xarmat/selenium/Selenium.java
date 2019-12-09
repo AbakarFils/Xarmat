@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.io.File;
 import java.io.IOException;
 
-public class SeleniumTest {
+public class Selenium {
 
     @Test
     public void test1() throws InterruptedException {
