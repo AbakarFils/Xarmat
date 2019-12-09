@@ -725,7 +725,7 @@
                         <excludes>
                             <exclude>**/*IT*</exclude>
                             <exclude>**/*IntTest*</exclude>
-                            <exclude>com.isi.m2gl.xarmat.selenium/SeleniumTest*</exclude>
+                            <exclude>com.isi.m2gl.xarmat.selenium/Selenium*</exclude>
                         </excludes>
                     </configuration>
                 </plugin>
@@ -742,7 +742,7 @@
                         <reportsDirectory>${junit.itReportFolder}</reportsDirectory>
                         <includes>
                             <!--<include>**/*IT*</include> <include>**/*IntTest*</include> -->
-                            <include>com.isi.m2gl.xarmat.selenium/SeleniumTest*</include>
+                            <include>com.isi.m2gl.xarmat.selenium/Selenium*</include>
                         </includes>
                     </configuration>
                     <executions>
