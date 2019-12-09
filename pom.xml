@@ -103,6 +103,23 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.141.59</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-chrome-driver</artifactId>
+            <version>3.141.59</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-server</artifactId>
+            <version>3.141.59</version>
+        </dependency>
+        <dependency>
             <groupId>io.github.jhipster</groupId>
             <artifactId>jhipster-framework</artifactId>
         </dependency>
@@ -559,6 +576,7 @@
                         <contexts>!test</contexts>
                     </configuration>
                     <dependencies>
+
                         <dependency>
                             <groupId>org.hibernate</groupId>
                             <artifactId>hibernate-core</artifactId>
@@ -707,6 +725,7 @@
                         <excludes>
                             <exclude>**/*IT*</exclude>
                             <exclude>**/*IntTest*</exclude>
+                            <exclude>com/isi/m2gl/xarmat/selenium/Selenium*</exclude>
                         </excludes>
                     </configuration>
                 </plugin>
@@ -724,6 +743,7 @@
                         <includes>
                             <include>**/*IT*</include>
                             <include>**/*IntTest*</include>
+                            <include>com/isi/m2gl/xarmat/selenium/Selenium*</include>
                         </includes>
                     </configuration>
                     <executions>
@@ -992,6 +1012,7 @@
                     <groupId>org.mapstruct</groupId>
                     <artifactId>mapstruct-processor</artifactId>
                 </dependency>
+
                 <dependency>
                     <groupId>org.hibernate</groupId>
                     <artifactId>hibernate-jpamodelgen</artifactId>
