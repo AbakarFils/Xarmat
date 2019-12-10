@@ -1,13 +1,16 @@
 package com.isi.m2gl.xarmat.selenium;
 
+import com.isi.m2gl.xarmat.XarmatApp;
 import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import java.io.File;
 import java.io.IOException;
 
+@SpringBootTest(classes = XarmatApp.class)
 public class Selenium {
 
     @Test
