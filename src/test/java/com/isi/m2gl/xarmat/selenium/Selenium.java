@@ -8,13 +8,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.io.File;
 import java.io.IOException;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 public class Selenium {
 
     @Test
     public void test1() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "D:\\cours\\M2\\devOps\\chromedriver_win32\\chromedriver.exe");
+        System.out.println("selenium test if execute");
         WebDriver driver = new ChromeDriver();
         driver.get("http://localhost:8082/xarmat/");
         driver.manage().window().maximize();
