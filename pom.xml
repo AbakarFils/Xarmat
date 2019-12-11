@@ -88,35 +88,6 @@
         <!-- jhipster-needle-maven-property -->
     </properties>
 
-     <!-- Configuration Nexus -->
-
-     <distributionManagement>
-		<snapshotRepository>
-			<id>nexus</id>
-			<url>http://localhost:8083/repository/maven-snapshots</url>
-		</snapshotRepository>
-	</distributionManagement>
-
-
-	<groupId>org.sonatype.plugins</groupId>
-				<artifactId>nexus-staging-maven-plugin</artifactId>
-				<version>1.5.1</version>
-				<executions>
-					<execution>
-						<id>default-deploy</id>
-						<phase>deploy</phase>
-						<goals>
-							<goal>deploy</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<serverId>nexus</serverId>
-					<nexusUrl>http://localhost:8083/nexus/</nexusUrl>
-					<skipStaging>true</skipStaging>
-				</configuration>
-
-
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -336,6 +307,47 @@
         <plugins>
 
 <!-- Ajouter -->
+
+     <distributionManagement>
+		<snapshotRepository>
+			<id>nexus</id>
+			<url>http://localhost:8083/repository/maven-snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	    <plugin>
+        	<groupId>org.sonatype.plugins</groupId>
+				<artifactId>nexus-staging-maven-plugin</artifactId>
+				<version>1.5.1</version>
+				<executions>
+					<execution>
+						<id>default-deploy</id>
+						<phase>deploy</phase>
+						<goals>
+							<goal>deploy</goal>
+						</goals>
+					</execution>
+				</executions>
+				
+				<configuration>
+					<serverId>nexus</serverId>
+					<nexusUrl>http://localhost:8083/nexus/</nexusUrl>
+					<skipStaging>true</skipStaging>
+				</configuration>
+         </plugin>
+	
+
+  <plugin>
+    <groupId>org.apache.tomcat.maven</groupId>
+    <artifactId>tomcat7-maven-plugin</artifactId>
+    <version>2.2</version>
+    <configuration>
+        <url>http://localhost:8082/manager/text</url>
+        <server>TomcatServer</server>
+        <path>/xarmat</path>
+    </configuration>
+</plugin>
+
   <plugin>
     <groupId>org.apache.tomcat.maven</groupId>
     <artifactId>tomcat7-maven-plugin</artifactId>
