@@ -3,7 +3,9 @@ package com.isi.m2gl.xarmat.selenium;
 import com.isi.m2gl.xarmat.XarmatApp;
 import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.*;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -44,8 +46,8 @@ public class Selenium {
         WebElement signin = driver.findElement(By.xpath("//button[@class='btn btn-primary']"));
         signin.click();*/
 
-        WebElement search = driver.findElement(By.id("fi-q"));
-        search.sendKeys("camera");
+        /*WebElement search = driver.findElement(By.id("fi-q"));
+        search.sendKeys("camera");*/
 
         TakesScreenshot ts = (TakesScreenshot) driver;
         File source = ts.getScreenshotAs(OutputType.FILE);
