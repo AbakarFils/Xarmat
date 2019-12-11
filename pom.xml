@@ -299,6 +299,24 @@
             <groupId>io.dropwizard.metrics</groupId>
             <artifactId>metrics-core</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.141.59</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-chrome-driver</artifactId>
+            <version>3.5.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-server</artifactId>
+            <version>3.141.59</version>
+        </dependency>
         <!-- jhipster-needle-maven-add-dependency -->
     </dependencies>
 
@@ -329,6 +347,16 @@
                             <version>${jaxb-runtime.version}</version>
                         </path>
                     </annotationProcessorPaths>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <url>http://localhost:8082/manager/text</url>
+                    <server>TomcatServer</server>
+                    <path>/webapps</path>
                 </configuration>
             </plugin>
             <plugin>
@@ -697,6 +725,7 @@
                         <excludes>
                             <exclude>**/*IT*</exclude>
                             <exclude>**/*IntTest*</exclude>
+                            <exclude>com/isi/m2gl/xarmat/selenium/Selenium*</exclude>
                         </excludes>
                     </configuration>
                 </plugin>
@@ -712,8 +741,7 @@
                         <runOrder>alphabetical</runOrder>
                         <reportsDirectory>${junit.itReportFolder}</reportsDirectory>
                         <includes>
-                            <include>**/*IT*</include>
-                            <include>**/*IntTest*</include>
+                            <include>com/isi/m2gl/xarmat/selenium/Selenium*</include>
                         </includes>
                     </configuration>
                     <executions>
