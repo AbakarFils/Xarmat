@@ -9,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.io.File;
 import java.io.IOException;
 
 @SpringBootTest(classes = XarmatApp.class)
@@ -20,7 +21,9 @@ public class Selenium {
         System.setProperty("webdriver.chrome.driver", "D:\\cours\\M2\\devOps\\chromedriver_win32\\chromedriver.exe");
 //        WebDriver driver = new FirefoxDriver();
         ChromeDriverService service = new ChromeDriverService.Builder()
-                .usingAnyFreePort()
+                .withWhitelistedIps("192.168.0.113")
+                .usingDriverExecutable(new File("D:\\cours\\M2\\devOps\\chromedriver_win32\\chromedriver.exe"))
+                .usingPort(8080)
                 .build();
         service.start();
         WebDriver driver = new ChromeDriver(service);
