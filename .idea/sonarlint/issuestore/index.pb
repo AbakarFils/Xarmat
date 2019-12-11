@@ -367,3 +367,5 @@ z
 Jsrc/test/java/com/isi/m2gl/xarmat/config/timezone/HibernateTimeZoneIT.java,a\1\a1f522fc944db8637a23fb25a36f2af829277a1d
 l
 <src/test/java/com/isi/m2gl/xarmat/service/UserServiceIT.java,5\9\59c836606ea7075972e617e8dab944d9b9d7ab0a
+~
+Nsrc/test/java/com/isi/m2gl/xarmat/repository/CustomAuditEventRepositoryIT.java,4\2\42db431191c27be1513a15b51faad68569e11d9f
