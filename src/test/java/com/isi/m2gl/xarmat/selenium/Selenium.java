@@ -1,22 +1,24 @@
 package com.isi.m2gl.xarmat.selenium;
 
+import com.isi.m2gl.xarmat.XarmatApp;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.springframework.boot.test.context.SpringBootTest;
 
-//@SpringBootTest(classes = XarmatApp.class)
+@SpringBootTest(classes = XarmatApp.class)
 public class Selenium {
 
     @Test
     public void test1() throws InterruptedException {
-//        System.setProperty("webdriver.gecko.driver", "D:\\cours\\M2\\devOps\\geckodriver\\geckodriver.exe");
-        System.setProperty("webdriver.chrome.driver", "D:\\cours\\M2\\devOps\\chromedriver_win32\\chromedriver.exe");
-//        WebDriver driver = new FirefoxDriver();
-        WebDriver driver = new ChromeDriver();
+        System.setProperty("webdriver.gecko.driver", "D:\\cours\\M2\\devOps\\geckodriver\\geckodriver.exe");
+//        System.setProperty("webdriver.chrome.driver", "D:\\cours\\M2\\devOps\\chromedriver_win32\\chromedriver.exe");
+        WebDriver driver = new FirefoxDriver();
+//        WebDriver driver = new ChromeDriver();
         driver.get("http://localhost:8082/xarmat/");
-        driver.manage().window().maximize();
+//        driver.manage().window().maximize();
         driver.manage().window();
 
         WebElement sbb = driver.findElement(By.id("account-menu"));

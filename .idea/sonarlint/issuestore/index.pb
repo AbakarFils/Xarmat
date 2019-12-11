@@ -363,3 +363,7 @@ b
 xarmat.iml,c\b\cbee6d96d8a345f922f61679a908ab1117fe621e
 h
 8src/test/java/com/isi/m2gl/xarmat/selenium/Selenium.java,c\9\c9e594895bf58c0b3a386bec548fd1a1d5a94ba1
+z
+Jsrc/test/java/com/isi/m2gl/xarmat/config/timezone/HibernateTimeZoneIT.java,a\1\a1f522fc944db8637a23fb25a36f2af829277a1d
+l
+<src/test/java/com/isi/m2gl/xarmat/service/UserServiceIT.java,5\9\59c836606ea7075972e617e8dab944d9b9d7ab0a
