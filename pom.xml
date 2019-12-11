@@ -109,6 +109,22 @@
     </dependencyManagement>
 
     <dependencies>
+    	<dependency>
+	        <groupId>org.seleniumhq.selenium</groupId>
+	        <artifactId>selenium-java</artifactId>
+	        <version>3.141.59</version>
+	    </dependency>
+	    <dependency>
+	        <groupId>org.seleniumhq.selenium</groupId>
+	        <artifactId>selenium-firefox-driver</artifactId>
+	        <version>3.141.59</version>
+	    </dependency>
+	    
+	    <dependency>
+	        <groupId>org.seleniumhq.selenium</groupId>
+	        <artifactId>selenium-server</artifactId>
+	        <version>3.141.59</version>
+	    </dependency>
         <dependency>
             <groupId>io.github.jhipster</groupId>
             <artifactId>jhipster-framework</artifactId>
@@ -733,6 +749,7 @@
                         <excludes>
                             <exclude>**/*IT*</exclude>
                             <exclude>**/*IntTest*</exclude>
+                            <exclude>com.isi.m2gl.xarmat.selenium/Selenium*</exclude>
                         </excludes>
                     </configuration>
                 </plugin>
@@ -748,8 +765,8 @@
                         <runOrder>alphabetical</runOrder>
                         <reportsDirectory>${junit.itReportFolder}</reportsDirectory>
                         <includes>
-                            <include>**/*IT*</include>
-                            <include>**/*IntTest*</include>
+                            <!--<include>**/*IT*</include> <include>**/*IntTest*</include> -->
+                            <include>com.isi.m2gl.xarmat.selenium/Selenium*</include>
                         </includes>
                     </configuration>
                     <executions>
