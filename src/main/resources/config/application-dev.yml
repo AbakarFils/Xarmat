@@ -36,9 +36,9 @@ spring:
       indent-output: true
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:postgresql://localhost:5432/Xarmat
+    url: jdbc:postgresql://localhost:5432/dbselenium
     username: postgres
-    password: passer
+    password: BAba9619
     hikari:
       poolName: Hikari
       auto-commit: false
@@ -66,7 +66,7 @@ spring:
     cache: false
 
 server:
-  port: 8070
+  port: 8080
 
 # ===================================================================
 # JHipster specific properties
