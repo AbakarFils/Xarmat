@@ -17,7 +17,7 @@ public class Selenium {
         System.setProperty("webdriver.chrome.driver", "D:\\cours\\M2\\devOps\\chromedriver_win32\\chromedriver.exe");
 //        WebDriver driver = new FirefoxDriver();
         WebDriver driver = new ChromeDriver();
-        driver.get("http://localhost:8082/xarmat/");
+        driver.get("http://127.0.0.1:8082/xarmat/");
         driver.manage().window().maximize();
         driver.navigate();
 //        driver.manage().window();
