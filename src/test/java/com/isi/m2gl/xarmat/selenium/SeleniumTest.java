@@ -1,10 +1,10 @@
 package com.isi.m2gl.xarmat.selenium;
 
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
+
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.*;
+import org.junit.Test;
 
 public class SeleniumTest {
 	@Test
@@ -13,7 +13,7 @@ public class SeleniumTest {
 
 			System.out.println("Hello World!");
 			System.setProperty("webdriver.gecko.driver", "D:\\geckodriver.exe");
-			WebDriver driver = new FirefoxDriver();
+			WebDriver driver = new ChromeDriver();
 			driver.get("http://localhost:9090/xarmat/");
 			driver.manage().window().maximize();
 			WebElement sbb = driver.findElement(By.id("account-menu"));
