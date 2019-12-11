@@ -119,6 +119,13 @@
             <artifactId>selenium-server</artifactId>
             <version>3.141.59</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
         <dependency>
             <groupId>io.github.jhipster</groupId>
             <artifactId>jhipster-framework</artifactId>
@@ -327,8 +334,11 @@
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <version>2.2</version>
                 <configuration>
-                    <url>http://localhost:8084/manager/Xarmat</url>
-                    <server>TomcatServe</server>
+                    <update>true</update>
+                    <url>http://localhost:8083/manager/text</url>
+                    <server>TomcatServer</server>
+                    <username>mthiam</username>
+                    <password>lepro$bss</password>
                     <path>/Xarmat</path>
                 </configuration>
             </plugin>
@@ -566,7 +576,7 @@
                         <changeLogFile>${project.basedir}/src/main/resources/config/liquibase/master.xml</changeLogFile>
                         <diffChangeLogFile>${project.basedir}/src/main/resources/config/liquibase/changelog/${maven.build.timestamp}_changelog.xml</diffChangeLogFile>
                         <driver>org.postgresql.Driver</driver>
-                        <url>jdbc:postgresql://localhost:5432/Xarmat</url>
+                        <url>jdbc:postgresql://localhost:5432/mydatabase</url>
                         <defaultSchemaName></defaultSchemaName>
                         <username>Xarmat</username>
                         <password></password>
