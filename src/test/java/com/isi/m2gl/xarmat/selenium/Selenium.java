@@ -30,9 +30,6 @@ public class Selenium {
         WebDriver driver = new ChromeDriver(service);
         driver.get("http://127.0.0.1:8082/xarmat/");
         driver.manage().window().maximize();
-        driver.navigate();
-//        driver.manage().window();
-
         WebElement sbb = driver.findElement(By.id("account-menu"));
         sbb.click();
 
