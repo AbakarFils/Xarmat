@@ -1,10 +1,9 @@
 package com.isi.m2gl.xarmat.selenium;
 
 import com.isi.m2gl.xarmat.XarmatApp;
+import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -30,7 +29,7 @@ public class Selenium {
         WebDriver driver = new ChromeDriver(service);
         driver.get("http://127.0.0.1:8082/xarmat/");
         driver.manage().window().maximize();
-        WebElement sbb = driver.findElement(By.id("account-menu"));
+       /* WebElement sbb = driver.findElement(By.id("account-menu"));
         sbb.click();
 
         WebElement login = driver.findElement(By.id("login"));
@@ -43,9 +42,9 @@ public class Selenium {
         password.sendKeys("admin");
 
         WebElement signin = driver.findElement(By.xpath("//button[@class='btn btn-primary']"));
-        signin.click();
+        signin.click();*/
 
-        /*WebElement search = driver.findElement(By.id("fi-q"));
+        WebElement search = driver.findElement(By.id("fi-q"));
         search.sendKeys("camera");
 
         TakesScreenshot ts = (TakesScreenshot) driver;
@@ -54,7 +53,7 @@ public class Selenium {
             FileUtils.copyFile(source, new File("screenmouhamed.png"));
         } catch (IOException e) {
             e.printStackTrace();
-        }*/
+        }
 
 //        WebElement searchIcon = driver.findElement(By.xpath("//button[@class='btn _prim _md -mls -fsh0']"));
 //        searchIcon.click();
