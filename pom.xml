@@ -19,6 +19,7 @@
 
     <!-- jhipster-needle-distribution-management -->
 
+
     <properties>
         <!-- Build properties -->
         <maven.version>3.0.0</maven.version>
@@ -87,6 +88,13 @@
         <junit.itReportFolder>${project.testresult.directory}/integrationTest</junit.itReportFolder>
         <!-- jhipster-needle-maven-property -->
     </properties>
+
+        			<distributionManagement>
+		               <snapshotRepository>
+							<id>nexus</id>
+							<url>http://localhost:8083/repository/maven-snapshots</url>
+						</snapshotRepository>
+				   </distributionManagement>
 
     <dependencyManagement>
         <dependencies>
@@ -308,14 +316,8 @@
 
 <!-- Ajouter -->
 
-     <distributionManagement>
-		<snapshotRepository>
-			<id>nexus</id>
-			<url>http://localhost:8083/repository/maven-snapshots</url>
-		</snapshotRepository>
-	</distributionManagement>
-
 	    <plugin>
+
         	<groupId>org.sonatype.plugins</groupId>
 				<artifactId>nexus-staging-maven-plugin</artifactId>
 				<version>1.5.1</version>
@@ -328,12 +330,7 @@
 						</goals>
 					</execution>
 				</executions>
-				
-				<configuration>
-					<serverId>nexus</serverId>
-					<nexusUrl>http://localhost:8083/nexus/</nexusUrl>
-					<skipStaging>true</skipStaging>
-				</configuration>
+
          </plugin>
 	
 
