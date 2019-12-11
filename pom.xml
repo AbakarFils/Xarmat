@@ -16,6 +16,13 @@
     <pluginRepositories>
         <!-- jhipster-needle-maven-plugin-repository -->
     </pluginRepositories>
+    
+    <distributionManagement>
+		<snapshotRepository>
+			<id>nexus</id>
+			<url>http://localhost:8081/repository/maven-snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
 
     <!-- jhipster-needle-distribution-management -->
 
@@ -305,6 +312,25 @@
     <build>
         <defaultGoal>spring-boot:run</defaultGoal>
         <plugins>
+        	<plugin>
+        		<groupId>org.sonatype.plugins</groupId>
+				<artifactId>nexus-staging-maven-plugin</artifactId>
+				<version>1.5.1</version>
+				<executions>
+					<execution>
+						<id>default-deploy</id>
+						<phase>deploy</phase>
+						<goals>
+							<goal>deploy</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<serverId>nexus</serverId>
+					<nexusUrl>http://localhost:8081/nexus/</nexusUrl>
+					<skipStaging>true</skipStaging>
+				</configuration>
+        	</plugin>
             <plugin>
                 <groupId>org.apache.tomcat.maven</groupId>
                 <artifactId>tomcat7-maven-plugin</artifactId>
