@@ -100,7 +100,7 @@
                 <groupId>io.github.jhipster</groupId>
                 <artifactId>jhipster-dependencies</artifactId>
                 <version>${jhipster-dependencies.version}</version>
-<!--                <type>pom</type>-->
+                <type>pom</type>
                 <scope>import</scope>
             </dependency>
             <!-- jhipster-needle-maven-add-dependency-management -->
