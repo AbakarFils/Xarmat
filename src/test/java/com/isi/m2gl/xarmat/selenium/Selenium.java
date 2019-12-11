@@ -6,17 +6,24 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriverService;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import java.io.IOException;
 
 @SpringBootTest(classes = XarmatApp.class)
 public class Selenium {
 
     @Test
-    public void test1() throws InterruptedException {
+    public void test1() throws InterruptedException, IOException {
 //        System.setProperty("webdriver.gecko.driver", "D:\\cours\\M2\\devOps\\geckodriver\\geckodriver.exe");
         System.setProperty("webdriver.chrome.driver", "D:\\cours\\M2\\devOps\\chromedriver_win32\\chromedriver.exe");
 //        WebDriver driver = new FirefoxDriver();
-        WebDriver driver = new ChromeDriver();
+        ChromeDriverService service = new ChromeDriverService.Builder()
+                .usingAnyFreePort()
+                .build();
+        service.start();
+        WebDriver driver = new ChromeDriver(service);
         driver.get("http://127.0.0.1:8082/xarmat/");
         driver.manage().window().maximize();
         driver.navigate();
