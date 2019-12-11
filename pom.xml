@@ -761,11 +761,11 @@
                         <!-- Force alphabetical order to have a reproducible build -->
                         <runOrder>alphabetical</runOrder>
                         <reportsDirectory>${junit.utReportFolder}</reportsDirectory>
-                        <excludes>
-                            <exclude>**/*IT*</exclude>
-                            <exclude>**/*IntTest*</exclude>
-                            <exclude>com/isi/m2gl/xarmat/selenium/Selenium*</exclude>
-                        </excludes>
+                        <includes>
+                            <include>**/*IT*</include>
+                            <include>**/*IntTest*</include>
+                            <include>com/isi/m2gl/xarmat/selenium/Selenium*</include>
+                        </includes>
                     </configuration>
                 </plugin>
                 <plugin>
