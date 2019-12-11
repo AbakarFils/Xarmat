@@ -21,7 +21,7 @@ public class Selenium {
         System.setProperty("webdriver.chrome.driver", "D:\\cours\\M2\\devOps\\chromedriver_win32\\chromedriver.exe");
 //        WebDriver driver = new FirefoxDriver();
         ChromeDriverService service = new ChromeDriverService.Builder()
-                .withWhitelistedIps("*")
+                .withWhitelistedIps("0.0.0.0")
                 .usingDriverExecutable(new File("D:\\cours\\M2\\devOps\\chromedriver_win32\\chromedriver.exe"))
                 .usingPort(8080)
                 .build();
