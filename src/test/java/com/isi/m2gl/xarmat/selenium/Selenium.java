@@ -3,9 +3,7 @@ package com.isi.m2gl.xarmat.selenium;
 import com.isi.m2gl.xarmat.XarmatApp;
 import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -29,9 +27,9 @@ public class Selenium {
                 .build();
         service.start();
         WebDriver driver = new ChromeDriver(service);
-        driver.get("http://127.0.0.1:8082/xarmat/");
+        driver.get("http://127.0.0.1:8082/xarmat");
         driver.manage().window().maximize();
-       /* WebElement sbb = driver.findElement(By.id("account-menu"));
+        WebElement sbb = driver.findElement(By.id("account-menu"));
         sbb.click();
 
         WebElement login = driver.findElement(By.id("login"));
@@ -44,7 +42,7 @@ public class Selenium {
         password.sendKeys("admin");
 
         WebElement signin = driver.findElement(By.xpath("//button[@class='btn btn-primary']"));
-        signin.click();*/
+        signin.click();
 
         /*WebElement search = driver.findElement(By.id("fi-q"));
         search.sendKeys("camera");*/
