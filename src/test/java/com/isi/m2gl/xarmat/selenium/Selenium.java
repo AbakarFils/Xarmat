@@ -18,8 +18,9 @@ public class Selenium {
         WebDriver driver = new FirefoxDriver();
 //        WebDriver driver = new ChromeDriver();
         driver.get("http://localhost:8082/xarmat/");
-//        driver.manage().window().maximize();
-        driver.manage().window();
+        driver.manage().window().maximize();
+        driver.navigate();
+//        driver.manage().window();
 
         WebElement sbb = driver.findElement(By.id("account-menu"));
         sbb.click();
